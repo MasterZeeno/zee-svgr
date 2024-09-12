@@ -1,6 +1,6 @@
 {
   "name": "zee-svgr",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "type": "module",
   "exports": {
     ".": {
@@ -25,7 +25,11 @@
     "test:watch": "vitest",
     "test:coverage": "vitest --coverage",
     "prepare": "husky",
-    "push": "npx changelogen@latest --release && git push -f"
+    "push": "changelogen --release --push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MasterZeeno/zee-svgr.git"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
