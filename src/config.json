@@ -1,0 +1,239 @@
+{
+  "customSize": 16,
+  "scaleFactorX": 1,
+  "scaleFactorY": 1,
+  "floatPrecision": 3,
+  "multipass": true,
+  "js2svg": {
+    "pretty": false
+  },
+  "plugins": [
+    {
+      "name": "removeDoctype"
+    },
+    {
+      "name": "removeXMLProcInst"
+    },
+    {
+      "name": "removeComments",
+      "params": {
+        "preservePatterns": false
+      }
+    },
+    {
+      "name": "removeMetadata"
+    },
+    {
+      "name": "removeEditorsNSData",
+      "params": {
+        "additionalNamespaces": []
+      }
+    },
+    {
+      "name": "cleanupAttrs"
+    },
+    {
+      "name": "mergeStyles"
+    },
+    {
+      "name": "inlineStyles",
+      "params": {
+        "onlyMatchedOnce": false,
+        "removeMatchedSelectors": true
+      }
+    },
+    {
+      "name": "minifyStyles",
+      "params": {
+        "usage": true
+      }
+    },
+    {
+      "name": "cleanupIds",
+      "params": {
+        "remove": true,
+        "minify": false,
+        "preserve": [],
+        "preservePrefixes": [],
+        "force": false
+      }
+    },
+    {
+      "name": "removeUselessDefs"
+    },
+    {
+      "name": "cleanupNumericValues",
+      "params": {
+        "floatPrecision": 3,
+        "leadingZero": true,
+        "defaultPx": true,
+        "convertToPx": true
+      }
+    },
+    {
+      "name": "convertColors",
+      "params": {
+        "currentColor": false,
+        "names2hex": true,
+        "rgb2hex": true,
+        "convertCase": "lower",
+        "shorthex": true,
+        "shortname": true
+      }
+    },
+    {
+      "name": "removeUnknownsAndDefaults",
+      "params": {
+        "unknownContent": true,
+        "unknownAttrs": true,
+        "defaultAttrs": true,
+        "defaultMarkupDeclarations": true,
+        "uselessOverrides": true,
+        "keepDataAttrs": true,
+        "keepAriaAttrs": true,
+        "keepRoleAttr": true
+      }
+    },
+    {
+      "name": "removeNonInheritableGroupAttrs"
+    },
+    {
+      "name": "removeUselessStrokeAndFill",
+      "params": {
+        "stroke": true,
+        "fill": true,
+        "removeNone": true
+      }
+    },
+    {
+      "name": "cleanupEnableBackground"
+    },
+    {
+      "name": "removeHiddenElems"
+    },
+    {
+      "name": "removeEmptyText"
+    },
+    {
+      "name": "cleanupListOfValues",
+      "params": {
+        "floatPrecision": 3
+      }
+    },
+    {
+      "name": "convertOneStopGradients"
+    },
+    {
+      "name": "convertStyleToAttrs",
+      "params": {
+        "keepImportant": false
+      }
+    },
+    {
+      "name": "convertShapeToPath",
+      "params": {
+        "convertArcs": true,
+        "floatPrecision": 3
+      }
+    },
+    {
+      "name": "convertEllipseToCircle"
+    },
+    {
+      "name": "moveGroupAttrsToElems"
+    },
+    {
+      "name": "collapseGroups"
+    },
+    {
+      "name": "convertTransform",
+      "params": {
+        "convertToShorts": true,
+        "floatPrecision": 3,
+        "transformPrecision": 3,
+        "matrixToTransform": true,
+        "shortTranslate": true,
+        "shortScale": true,
+        "shortRotate": true,
+        "removeUseless": true,
+        "collapseIntoOne": false
+      }
+    },
+    {
+      "name": "convertPathData",
+      "params": {
+        "applyTransforms": true,
+        "applyTransformsStroked": true,
+        "straightCurves": true,
+        "convertToQ": true,
+        "lineShorthands": true,
+        "convertToZ": true,
+        "curveSmoothShorthands": true,
+        "floatPrecision": 3,
+        "transformPrecision": 3,
+        "smartArcRounding": true,
+        "removeUseless": true,
+        "collapseRepeated": true,
+        "utilizeAbsolute": true,
+        "negativeExtraSpace": true,
+        "forceAbsolutePath": true
+      }
+    },
+    {
+      "name": "removeEmptyAttrs"
+    },
+    {
+      "name": "removeEmptyContainers"
+    },
+    {
+      "name": "removeUnusedNS"
+    },
+    {
+      "name": "mergePaths",
+      "params": {
+        "force": true,
+        "floatPrecision": 3,
+        "noSpaceAfterFlags": true
+      }
+    },
+    {
+      "name": "sortAttrs"
+    },
+    {
+      "name": "sortDefsChildren"
+    },
+    {
+      "name": "removeTitle"
+    },
+    {
+      "name": "removeDesc",
+      "params": {
+        "removeAny": true
+      }
+    },
+    {
+      "name": "removeDimensions"
+    },
+    {
+      "name": "removeOffCanvasPaths"
+    },
+    {
+      "name": "removeRasterImages"
+    },
+    {
+      "name": "removeScriptElement"
+    },
+    {
+      "name": "removeStyleElement"
+    },
+    {
+      "name": "removeXMLNS"
+    },
+    {
+      "name": "removeXlink",
+      "params": {
+        "includeLegacy": true
+      }
+    }
+  ]
+}
