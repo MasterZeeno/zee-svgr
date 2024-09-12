@@ -1,7 +1,12 @@
 {
   "name": "zee-svgr",
-  "version": "0.0.6",
   "type": "module",
+  "version": "0.0.7",
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MasterZeeno/zee-svgr.git"
+  },
   "exports": {
     ".": {
       "import": "./lib/zee-svgr.js",
@@ -9,12 +14,12 @@
     }
   },
   "main": "./lib/zee-svgr.cjs",
-  "bin": "./bin/zee-svgr",
   "module": "./lib/zee-svgr.js",
   "types": "./lib/zee-svgr.d.ts",
+  "bin": "./bin/zee-svgr",
   "files": [
-    "lib",
-    "bin"
+    "bin",
+    "lib"
   ],
   "scripts": {
     "dev": "vite",
@@ -27,9 +32,9 @@
     "prepare": "husky",
     "push": "npx changelogen@latest --release --push"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/MasterZeeno/zee-svgr.git"
+  "dependencies": {
+    "commander": "^12.1.0",
+    "svgo": "^3.3.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
@@ -49,10 +54,5 @@
   },
   "lint-staged": {
     "*.ts": "pnpm run lint"
-  },
-  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
-  "dependencies": {
-    "commander": "^12.1.0",
-    "svgo": "^3.3.2"
   }
 }

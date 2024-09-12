@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v0.0.7
+
+[compare changes](https://github.com/MasterZeeno/zee-svgr/compare/v0.0.6...v0.0.7)
+
 ## v0.0.6
 
 [compare changes](https://github.com/MasterZeeno/zee-svgr/compare/v0.0.4...v0.0.6)
