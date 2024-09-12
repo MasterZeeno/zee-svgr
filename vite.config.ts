@@ -12,12 +12,24 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       formats: ['es', 'cjs', 'umd', 'iife'],
-      name: camelCase(packageName, { pascalCase: true }),
-      fileName: packageName,
-    },
+      name: camelCase(packageName, {
+        pascalCase: true
+      }),
+      fileName: packageName
+    }
+  },
+  rollupOptions: {
+    external: ['svgo'],
+    output: {
+      globals: {
+        svgo: 'SVGO'
+      }
+    }
   },
   plugins: [
-    dts({ rollupTypes: true }),
+    dts({
+      rollupTypes: true
+    }),
   ],
   test: {},
 })
