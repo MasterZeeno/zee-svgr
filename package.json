@@ -1,6 +1,6 @@
 {
   "name": "zee-svgr",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "type": "module",
   "exports": {
     ".": {
@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "release": "pnpm test && pnpm build && changelogen --release --push && pnpm publish",
+    "release": "pnpm test && pnpm build && pnpm push && pnpm publish",
     "lint": "eslint . --fix",
     "test": "vitest --run",
     "test:watch": "vitest",
