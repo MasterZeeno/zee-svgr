@@ -1,6 +1,6 @@
 {
   "name": "zee-svgr",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "exports": {
     ".": {
@@ -25,7 +25,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest --coverage",
     "prepare": "husky",
-    "push": "changelogen --release --push"
+    "push": "npx changelogen@latest --release --push"
   },
   "repository": {
     "type": "git",
