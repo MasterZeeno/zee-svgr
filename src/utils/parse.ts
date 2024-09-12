@@ -14,24 +14,25 @@ const paramCounts: Record<string, number> = {
   z: 0,
 }
 
-const checkValues = (command: string, values: string[]): boolean => {
+function checkValues(command: string, values: string[]): boolean {
   const c = command.toLowerCase()
-  return paramCounts.hasOwnProperty(c)
+  return Object.prototype.hasOwnProperty.call(paramCounts, c)
     ? values.length === paramCounts[c] || values.length % paramCounts[c] === 0
     : false
 }
 
-export default (node: any): Array<{ command: string values: number[] }> => {
+export default (node: any): Array<{ command: string, values: number[] }> => {
   const path: string = toPath(node)
-  const re = /([MmLlSsQqLlHhVvCcSsQqTtAaZz])([^MmLlSsQqLlHhVvCcSsQqTtAaZz]*)/g
-  const num = /-?[0-9]*\.?\d+/g
-  const results: Array<{ command: string values: number[] }> = []
+  const re = /([MLSQHVCTAZ])([^MLSQHVCTAZ]*)/gi
+  const num = /-?\d*\.?\d+/g
+  const results: Array<{ command: string, values: number[] }> = []
 
   path.replace(re, (match: string, command: string, params: string) => {
     const values = params.match(num) || []
     if (checkValues(command, values)) {
       results.push({ command, values: values.map((v) => +v) })
     }
+    return match // Return the original match
   })
 
   return results

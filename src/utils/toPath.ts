@@ -1,4 +1,4 @@
-import { chunkArray, calcValue } from './util'
+import { calcValue, chunkArray } from './util'
 
 interface Attributes {
   width?: string | number
@@ -18,7 +18,7 @@ interface Attributes {
   d?: string
 }
 
-const rect = (attrs: Attributes): string[] => {
+function rect(attrs: Attributes): string[] {
   const w = +attrs.width!
   const h = +attrs.height!
   const x = attrs.x ? +attrs.x : 0
@@ -60,7 +60,7 @@ const rect = (attrs: Attributes): string[] => {
   ]
 }
 
-const ellipse = (attrs: Attributes): string[] => {
+function ellipse(attrs: Attributes): string[] {
   const cx = +attrs.cx!
   const cy = +attrs.cy!
   const rx = attrs.rx ? +attrs.rx : +attrs.r!
@@ -74,11 +74,11 @@ const ellipse = (attrs: Attributes): string[] => {
   ]
 }
 
-const line = ({ x1, y1, x2, y2 }: Attributes): string[] => {
+function line({ x1, y1, x2, y2 }: Attributes): string[] {
   return [`M${+x1!} ${+y1!}`, `L${+x2!} ${+y2!}`]
 }
 
-const poly = (attrs: Attributes): string[] => {
+function poly(attrs: Attributes): string[] {
   const { points } = attrs
   const pointsArray = points!
     .trim()
@@ -93,7 +93,7 @@ const poly = (attrs: Attributes): string[] => {
   })
 }
 
-const toPathString = (d: string[] | undefined): string => {
+function toPathString(d: string[] | undefined): string {
   return Array.isArray(d) ? d.join(' ') : ''
 }
 
@@ -105,7 +105,7 @@ interface Node {
 
 export default (
   node: Node,
-  { nodeName = 'name', nodeAttrs = 'attributes' }: { nodeName?: string nodeAttrs?: string } = {}
+  { nodeName = 'name', nodeAttrs = 'attributes' }: { nodeName?: string, nodeAttrs?: string } = {},
 ): string => {
   const name = node[nodeName]
   const attributes = node[nodeAttrs]

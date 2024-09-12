@@ -1,4 +1,4 @@
-export const chunkArray = <T>(arr: T[], size: number = 2): T[][] => {
+export function chunkArray<T>(arr: T[], size: number = 2): T[][] {
   const results: T[][] = []
   while (arr.length) {
     results.push(arr.splice(0, size))
@@ -6,9 +6,9 @@ export const chunkArray = <T>(arr: T[], size: number = 2): T[][] => {
   return results
 }
 
-export const calcValue = (val: string | number, base: number): number => {
-  return typeof val === 'string' && /%$/.test(val)
-    ? (parseFloat(val.replace('%', '')) * base) / 100
+export function calcValue(val: string | number, base: number): number {
+  return typeof val === 'string' && val.endsWith('%')
+    ? (Number.parseFloat(val.replace('%', '')) * base) / 100
     : +val
 }
 
@@ -17,7 +17,7 @@ interface PathCommand {
   values: (string | number)[]
 }
 
-export const stringify = (path: PathCommand[]): string => {
+export function stringify(path: PathCommand[]): string {
   return path.reduce((acc, next) => {
     return `${acc}${next.command}${next.values.join(' ')}`
   }, '')
